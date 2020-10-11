@@ -1,10 +1,17 @@
-jQuery( '.et_pb_image_wrap' ).each( function () {
-	var parent = jQuery( this ).parent();
-	if ( 'undefined' === typeof parent.attr( 'title' ) ) {
-		var img = jQuery( this ).find( 'img' );
-		var title_or_alt = 'undefined' !== typeof img.attr( 'title' ) ? img.attr( 'title' ) : img.attr( 'alt' );
-		if ( 'undefined' !== typeof title_or_alt && '' !== title_or_alt ) {
-			parent.attr( 'title', title_or_alt );
-		}
-	}
-} );
+/** Add title attributes to Divi image links if needed. */
+function addDiviLinkTitles() {
+  console.log('querySelector: ' + php_vars.querySelector)
+  let elts = document.querySelectorAll(php_vars.querySelector);
+  let eltsArr = Array.from(elts);
+  eltsArr.map((elt) => {
+    let parent = elt.parentElement;
+    let linkTitle = parent.getAttribute("title");
+    if (linkTitle === undefined || linkTitle === "") {
+      let child = elt.firstElementChild;
+      let imgTitle = child.getAttribute("title");
+      let imgAlt = child.getAttribute("alt");
+      let linkTitleOrAlt = imgTitle ? imgTitle : imgAlt;
+      if ((linkTitleOrAlt !== undefined) && (linkTitleOrAlt !== "")) parent.setAttribute("title", linkTitleOrAlt);
+    }
+  });
+}
