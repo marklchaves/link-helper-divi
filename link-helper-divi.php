@@ -10,12 +10,12 @@
  * @wordpress-plugin
  * Plugin Name:       Link Helper Divi
  * Plugin URI:        https://github.com/chavesm/link-helper-divi
- * Description:       Insert missing title attributes for image links. This will help Google Analytics link tracking for Divi themes.
+ * Description:       Insert missing title attributes for image links. This will help Google Analytics link tracking for themes like Divi.
  * Version:           0.1.0
- * Author:            MonsterInsights
- * Author URI:        https://www.monsterinsights.com
+ * Author:            mark l chaves
+ * Author URI:        https://github.com/chavesm
  * License:           TBD
- * License URI:       https://www.monsterinsights.com
+ * License URI:       https://github.com/chavesm
  * Text Domain:       link-helper-divi
  */
 
@@ -26,21 +26,24 @@ if (!defined('WPINC')) {
 
 define('LINK_HELPER_DIVI_PLUGIN_NAME', 'link-helper-divi');
 define('LINK_HELPER_DIVI_PLUGIN_VERSION', '0.1.0');
+define('LINK_HELPER_SELECTOR', '.et_pb_image_wrap'); // Default to Divi.
 
 /**
  * Enqueue the Link Helper JavaScript Library
+ * and Inline Script
+ * 
+ * This supports the link_helper_selector filter.
  */
 
 function enqueue_link_helper_divi_javascript()
 {	
     wp_register_script( LINK_HELPER_DIVI_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'public/js/' . LINK_HELPER_DIVI_PLUGIN_NAME . '.js', '', LINK_HELPER_DIVI_PLUGIN_VERSION, true ); // Put in the footer ~mlc
-
     wp_enqueue_script( LINK_HELPER_DIVI_PLUGIN_NAME );
 
     $script = 'addDiviLinkTitles();';
     wp_add_inline_script( LINK_HELPER_DIVI_PLUGIN_NAME, $script, 'after' );
 
-    $query_selector = '.et_pb_image_wrap';
+    $query_selector = LINK_HELPER_SELECTOR;
     $query_selector = apply_filters( 'link_helper_selector', $query_selector );
     $php_vars = array(
         'querySelector' => $query_selector
