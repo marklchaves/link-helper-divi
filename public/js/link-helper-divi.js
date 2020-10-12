@@ -1,6 +1,5 @@
-/** Add title attributes to Divi image links if needed. */
+/** Add title attributes to image links if needed. */
 function addDiviLinkTitles() {
-  console.log('querySelector: ' + php_vars.querySelector)
   let elts = document.querySelectorAll(php_vars.querySelector);
   let eltsArr = Array.from(elts);
   eltsArr.map((elt) => {
