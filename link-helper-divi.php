@@ -11,7 +11,7 @@
  * Plugin Name:       Link Helper Divi
  * Plugin URI:        https://github.com/chavesm/link-helper-divi
  * Description:       Insert missing title attributes for image links. This will help Google Analytics link tracking for themes like Divi.
- * Version:           0.1.0
+ * Version:           1.0.0
  * Author:            mark l chaves
  * Author URI:        https://github.com/chavesm
  * License:           TBD
@@ -25,7 +25,7 @@ if (!defined('WPINC')) {
 }
 
 define('LINK_HELPER_DIVI_PLUGIN_NAME', 'link-helper-divi');
-define('LINK_HELPER_DIVI_PLUGIN_VERSION', '0.1.0');
+define('LINK_HELPER_DIVI_PLUGIN_VERSION', '1.0.0');
 define('LINK_HELPER_SELECTOR', '.et_pb_image_wrap'); // Default to Divi.
 
 /**

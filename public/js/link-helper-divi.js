@@ -9,8 +9,8 @@ function addDiviLinkTitles() {
       let child = elt.firstElementChild;
       let imgTitle = child.getAttribute("title");
       let imgAlt = child.getAttribute("alt");
-      let linkTitleOrAlt = imgTitle ? imgTitle : imgAlt;
-      if ((linkTitleOrAlt !== undefined) && (linkTitleOrAlt !== "")) parent.setAttribute("title", linkTitleOrAlt);
+      let imgTitleOrAlt = imgTitle ? imgTitle : imgAlt;
+      if ((imgTitleOrAlt !== undefined) && (imgTitleOrAlt !== "")) parent.setAttribute("title", imgTitleOrAlt);
     }
   });
 }
