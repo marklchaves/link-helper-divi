@@ -13,9 +13,9 @@
  * Description:       Insert missing title attributes for image links. This will help Google Analytics link tracking for themes like Divi.
  * Version:           1.0.0
  * Author:            mark l chaves
- * Author URI:        https://github.com/chavesm
- * License:           TBD
- * License URI:       https://github.com/chavesm
+ * Author URI:        https://www.caughtmyeye.cc
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       link-helper-divi
  */
 
