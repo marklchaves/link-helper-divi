@@ -14,6 +14,10 @@ Some WordPress themes/page builders (such as Divi) don't set a title attribute f
 
 This plugin automatically finds those cases and will insert a title attribute using the child image's title or the alt text as the fallback.
 
+Below is what we want to avoid and what this plugin will fix for you.
+
+![We want to avoid the dreaded (not set) label](https://marklchaves.files.wordpress.com/2021/01/ga-top-events-outbound-not-set-marked.png)
+
 ---
 
 ## Installation and Usage
