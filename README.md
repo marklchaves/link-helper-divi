@@ -1,6 +1,6 @@
 # Link Helper Plugin for Divi
 
-This is a WordPress plugin that will insert missing title attributes for image links. Having a title attribute for links helps with Google Analytics link tracking for themes like Divi.
+Link Helper Divi is a WordPress plugin that will insert missing title attributes for image links. Having a title attribute for links helps with Google Analytics link tracking for themes like Divi.
 
 ---
 
