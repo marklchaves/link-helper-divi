@@ -1,18 +1,18 @@
 # Link Helper Plugin for Divi
 
-This is a WordPress plugin that will insert missing title attributes for image links. This will help Google Analytics link tracking for themes like Divi.
+This is a WordPress plugin that will insert missing title attributes for image links. Having a title attribute for links helps with Google Analytics link tracking for themes like Divi.
 
 ---
 
 ## Description
 
-Once installed and activated, this plugin will find image links that don't have a title attribute set. 
+Once installed and activated, this plugin will automatically insert a title attribute for any image links that don't have one.. 
 
 Since image links don't have text as the link (hence image link), some Google Analytics trackers will fallback to a title attribute in the HTML link element. If the link has no title attribute, then the image link either won't get tracked, or it it does, it will display a non-meaningful label for the link event (e.g., Label not set or the HTML code for the child image element).
 
 Some WordPress themes/page builders (such as Divi) don't set a title attribute for image links. Furthermore, they don't provide a way through the UI to insert a title attribute value pair.
 
-This plugin automatically finds those cases and will insert a title attribute using the child image's title or the alt text as the fallback.
+The Link Helper Divi plugin automatically finds those cases and will insert a title attribute using the child image's title or the alt text as the fallback.
 
 Below is what we want to avoid and what this plugin will fix for you.
 
@@ -40,7 +40,7 @@ add_filter( 'link_helper_selector', 'my_link_helper_query_selector' );
 
 ## Example Divi Source Code
 
-This plugin was originally designed to work with Divi, but it can work with any theme or plugin that follows the same HTML structure (e.g., link > wrapper (span/div) > image).
+The Link Helper Divi plugin was originally designed to work with Divi, but it can work with any theme or plugin that follows the same HTML structure (e.g., link > wrapper (span/div) > image).
 
 The source code below is based of [Divi's Image Module](https://www.elegantthemes.com/preview/Divi/image/) page visited in October 2020.
 
