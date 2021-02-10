@@ -1,9 +1,8 @@
 /** Add title attributes to image links if needed. */
 function addDiviLinkTitles() {
   let elts = document.querySelectorAll(php_vars.querySelector);
-  if (elts === undefined || elts === "") return;
-  let eltsArr = Array.from(elts);
-  eltsArr.map((elt) => {
+  if (elts.length === 0) return;
+  [...elts].map((elt) => {
     try {
       let parent = elt.parentElement;
       let linkTitle = parent.getAttribute("title");
