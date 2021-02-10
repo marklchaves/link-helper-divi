@@ -2,8 +2,7 @@
 function addDiviLinkTitles() {
   let elts = document.querySelectorAll(php_vars.querySelector);
   if (elts.length === 0) return;
-  let eltsArr = Array.from(elts);
-  eltsArr.map((elt) => {
+  [...elts].map((elt) => {
     try {
       let parent = elt.parentElement;
       let linkTitle = parent.getAttribute("title");
