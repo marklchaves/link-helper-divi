@@ -1,7 +1,7 @@
 /** Add title attributes to image links if needed. */
 function addDiviLinkTitles() {
   let elts = document.querySelectorAll(php_vars.querySelector);
-  if (elts.length === 0) return;
+  if (!elts.length) return; // If nothing, bail early.
   [...elts].map((elt) => {
     try {
       let parent = elt.parentElement;
